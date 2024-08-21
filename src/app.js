@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, '..', 'projeto-node', 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the main HTML file
 app.get('/', (req, res) => {
-    const filePath = path.join(__dirname, '..', 'projeto-node', 'public', 'index.html');
+    const filePath = path.join(__dirname, 'public', 'index.html');
     res.sendFile(filePath);
 });
 

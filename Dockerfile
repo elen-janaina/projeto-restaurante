@@ -2,7 +2,7 @@
 FROM node:18
 
 # Crie e defina o diretório de trabalho no contêiner
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copie o package.json e o package-lock.json para o contêiner
 COPY package*.json ./
@@ -11,10 +11,11 @@ COPY package*.json ./
 RUN npm install
 
 # Copie o diretório src para o contêiner
-COPY ../src ./src
+COPY ./src ./
+COPY ./public ./public
 
 # Exponha a porta que a aplicação usará
 EXPOSE 3000
 
 # Comando para iniciar a aplicação
-CMD [ "node", "src/app.js" ]
+ENTRYPOINT [ "node", "app.js" ]

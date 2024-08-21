@@ -3,9 +3,9 @@ services:
     image: postgres:14
     container_name: my_postgres
     environment:
-      POSTGRES_USER: your_user
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: mydatabase
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: Reserva
     ports:
       - "5432:5432"  # Mapeia a porta do contêiner para a porta do host
     volumes:
@@ -19,11 +19,11 @@ services:
     depends_on:
       - db
     ports:
-      - "3000:3000"
+      - "8080:8080"
     environment:
-      DATABASE_URL: postgres://your_user:your_password@db:5432/mydatabase
-    volumes:
-      - ../src:/usr/src/app/src
-    command: node src/app.js
+      DATABASE_URL: postgres://postgres:postgres@db:5432/mydatabase
+    # volumes:
+    #   - ../src:/usr/src/app/src
+    command: node app.js
 volumes:
   pgdata:
