@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Restaurante Italy Bella</title>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body background="./imagem/bandeira Italia.jpeg">
+ 
+  <header>
+    <div class="header-nav">
+      <div>
+        <h1>Restaurante Italy Bella</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#menu">Cardápio</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="#reservation">Reserva</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    <div class="nav-button">
+      <div class="nav-image">
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <section id="home">
+    <h2>Bem-vindo ao Italy Bella</h2>
+    <p>Servimos os pratos mais saborosos da região.</p>
+    <p>Temos como nossos principais pratos</p>
+    <li>Risoto de alho Poró, acompanhado de um filé ao molho de maracujá</li>
+    <li>Massa Bolonha, acompanhado de um bom vinho cabernet</li>
+    <li>Lasanha Bolonha, com um toque de mangericão</li>
+  </section>
+
+  <section id="menu">
+    <h2>Cardápio</h2>
+    <ul>
+      <li>
+        <h3>Risoto</h3>
+        <p>Risoto de alho Poró</p>
+        <p>Acompanhado de filé ao molho de mostarda</p>
+      <img src="./imagem/risoto alho.jpg" width="250" height="250">
+      </li>
+      <li>
+        <h3>Massa</h3>
+        <p>Massa Bolonha</p>
+        <p>Acompanhado de um vinho cabernet</p>
+        <img src="./imagem/massa.jpeg" width="300" height="300">
+      </li>
+      <li>
+        <h3>Lasanha</h3>
+        <p>Lasanha Bolonha</p>
+        <p>Acompanhado com queijo mussarela</p>
+        <img src="./imagem/comidas-tipicas-da-italia.jpg" width="300" height="300">
+      </li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>Sobre</h2>
+    <p>O Restaurante Italy Bella está no mercado desde 2005, oferecendo uma experiência gastronômica única.</p>
+    <p>Temos uma carta de vinhos e várias opções de pratos</p>
+  </section>
+
+
+  <section id="reservation">
+    <h2>Reserva</h2>
+    <form action="/api/reserva" method="post">
+   
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome" required><br><br>
+  
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+  
+      <label for="data">Data:</label><br>
+      <input type="date" id="data" name="data" required><br><br>
+  
+      <label for="quantidade">Quantidade de Pessoas:</label><br>
+      <input type="number" id="quantidade" name="quantidade" required><br><br>
+  
+      <input type="submit" value="Enviar">
+  </form>
+  </section>
+
+  <div id="success-message" style="display: none;">
+    Sua reserva foi feita com sucesso! Entraremos em contato em breve para confirmar os detalhes.
+</div>
+
+  
+  <section id="contact">
+    <h2>Contato</h2>
+    <p>Entre em contato conosco pelo telefone: (51) 997418401</p>
+  </section>
+
+  <footer>
+
+    <p>&copy; 2024 Restaurante Italy Bella. Todos os direitos reservados.</p>
+    
+  </footer>
+
+</body>
+</html>
+
+
+
+
